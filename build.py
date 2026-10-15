@@ -69,7 +69,7 @@ def tasks_html(u): return '<ul class="tasks">'+''.join(f'<li><a href="{B}/recipe
 VIDEOS={"ai-lead-research-and-personalized-first-lines":("sales-lead-research","Sales: from raw lead list to personal first lines"),"support-ticket-triage-and-tagging":("support-ticket-triage","Support: an inbox that triages itself"),"receipt-and-invoice-capture-for-freelancers":("finance-receipt-capture","Personal finance: receipts that file themselves")}
 def vtag(slug):
   v,t=VIDEOS[slug]
-  return f'<video controls muted playsinline preload="none" loading="lazy" poster="{B}/videos/{v}.jpg" width="1280" height="720" aria-label="{e(t)}"><source src="{B}/videos/{v}.mp4" type="video/mp4"></video>'
+  return f'<video controls playsinline preload="none" loading="lazy" poster="{B}/videos/{v}.jpg" width="1280" height="720" aria-label="{e(t)}"><source src="{B}/videos/{v}.mp4" type="video/mp4"></video>'
 
 FOOT=f'<footer><p>Roar Workflows. Tool links go to official sites; we are not affiliated unless marked sponsored. <a href="{B}/llms.txt">llms.txt</a> · <a href="{B}/sitemap.xml">sitemap</a></p><p class="credits">{CRED}</p></footer><script data-goatcounter="https://roarworkflows.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>'
 for r in data:
