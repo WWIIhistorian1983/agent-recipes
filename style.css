@@ -21,3 +21,4 @@ form{display:flex;gap:8px;flex-wrap:wrap}form input{flex:1 1 220px}form p{flex-b
 .recipe{--c:#4f46e5;max-width:780px}.recipe h1{border-left:6px solid var(--c);padding-left:14px}.recipe h2{color:color-mix(in srgb,var(--c) 70%,#000)}.note{color:#6b6386;font-size:.9rem}
 footer{text-align:center;color:#6b6386;padding:30px 20px;font-size:.9rem}.credits{font-size:.8rem}
 @media(max-width:600px){.photo{padding:36px 18px;border-radius:0;margin:-20px -20px 18px}nav a{margin-left:10px}}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem}.logo img{width:40px;height:40px;display:block}
