@@ -171,7 +171,7 @@
    },
    {
     "name": "Notion",
-    "url": "https://www.notion.so"
+    "url": "https://www.notion.com"
    }
   ],
   "steps": [
@@ -199,7 +199,7 @@
    },
    {
     "name": "Anthropic API",
-    "url": "https://www.anthropic.com/api"
+    "url": "https://claude.com/platform/api"
    }
   ],
   "steps": [
@@ -275,7 +275,7 @@
   "tools": [
    {
     "name": "Claude Code",
-    "url": "https://www.anthropic.com/claude-code"
+    "url": "https://claude.com/product/claude-code"
    },
    {
     "name": "GitHub",
@@ -359,7 +359,7 @@
    },
    {
     "name": "Claude Code",
-    "url": "https://www.anthropic.com/claude-code"
+    "url": "https://claude.com/product/claude-code"
    }
   ],
   "steps": [
@@ -407,7 +407,7 @@
   "tools": [
    {
     "name": "Google Search Console",
-    "url": "https://search.google.com/search-console"
+    "url": "https://search.google.com/search-console/about"
    },
    {
     "name": "Perplexity",
@@ -415,7 +415,7 @@
    },
    {
     "name": "Notion",
-    "url": "https://www.notion.so"
+    "url": "https://www.notion.com"
    }
   ],
   "steps": [
@@ -495,7 +495,7 @@
   "tools": [
    {
     "name": "Tiller",
-    "url": "https://www.tillerhq.com"
+    "url": "https://tiller.com"
    },
    {
     "name": "Google Sheets",
@@ -639,7 +639,7 @@
    },
    {
     "name": "Notion",
-    "url": "https://www.notion.so"
+    "url": "https://www.notion.com"
    }
   ],
   "steps": [
@@ -743,7 +743,7 @@
   "tools": [
    {
     "name": "Notion",
-    "url": "https://www.notion.so"
+    "url": "https://www.notion.com"
    },
    {
     "name": "Google Calendar",
@@ -799,7 +799,7 @@
    },
    {
     "name": "Notion",
-    "url": "https://www.notion.so"
+    "url": "https://www.notion.com"
    }
   ],
   "steps": [
