@@ -66,7 +66,7 @@ CRED=' · '.join(f'<a href="{p}">Photo</a> by <a href="{u}">{n}</a>' for n,u,p i
 def chip(u): n,c,ic=CAT[u]; return f'<span class="b chip" style="--c:{c}">{ic} {e(n)}</span>'
 def tasks_html(u): return '<ul class="tasks">'+''.join(f'<li><a href="{B}/recipes/{sl}.html">{e(t)}</a></li>' for t,sl in TASKS[u])+'</ul>'
 
-FOOT=f'<footer><p>Roar Workflows. Tool links go to official sites; we are not affiliated unless marked sponsored. <a href="{B}/llms.txt">llms.txt</a> · <a href="{B}/sitemap.xml">sitemap</a></p><p class="credits">{CRED}</p></footer></body></html>'
+FOOT=f'<footer><p>Roar Workflows. Tool links go to official sites; we are not affiliated unless marked sponsored. <a href="{B}/llms.txt">llms.txt</a> · <a href="{B}/sitemap.xml">sitemap</a></p><p class="credits">{CRED}</p></footer><script data-goatcounter="https://roarworkflows.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>'
 for r in data:
   title=f"{r['title']} | AI agent recipe for {r['use_case'].replace('-',' ')} | Roar Workflows"
   ld={"@context":"https://schema.org","@type":"HowTo","name":r['title'],"description":r['problem'],"tool":[{"@type":"HowToTool","name":x['name']} for x in r['tools']],"step":[{"@type":"HowToStep","position":i+1,"text":s} for i,s in enumerate(r['steps'])]}
