@@ -1,4 +1,4 @@
-# Agent Recipes
+# Lionshare AI
 
 > A searchable directory of real-world AI agent workflows by use case: sales, support, coding, marketing, finance, fitness, home, research and ops.
 
