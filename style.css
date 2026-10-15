@@ -22,3 +22,5 @@ form{display:flex;gap:8px;flex-wrap:wrap}form input{flex:1 1 220px}form p{flex-b
 footer{text-align:center;color:#6b6386;padding:30px 20px;font-size:.9rem}.credits{font-size:.8rem}
 @media(max-width:600px){.photo{padding:36px 18px;border-radius:0;margin:-20px -20px 18px}nav a{margin-left:10px}}
 .logo{display:flex;align-items:center;gap:10px;font-size:1.1rem}.logo img{width:40px;height:40px;display:block}
+video{width:100%;height:auto;border-radius:14px;background:#14112b;display:block}.vid{margin:14px 0}
+.seeit{background:linear-gradient(120deg,#fff7ed,#fdf2f8,#f5f3ff)}.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.vgrid figure{margin:0}.vgrid figcaption{margin-top:8px;font-weight:700}
