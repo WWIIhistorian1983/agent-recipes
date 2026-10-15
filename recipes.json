@@ -1,0 +1,894 @@
+[
+ {
+  "slug": "ai-lead-research-and-personalized-first-lines",
+  "title": "AI lead research and personalized first lines",
+  "use_case": "sales",
+  "problem": "Reps waste hours researching prospects before writing outreach.",
+  "tools": [
+   {
+    "name": "Clay",
+    "url": "https://www.clay.com"
+   },
+   {
+    "name": "Apollo.io",
+    "url": "https://www.apollo.io"
+   },
+   {
+    "name": "OpenAI API",
+    "url": "https://platform.openai.com"
+   },
+   {
+    "name": "Google Sheets",
+    "url": "https://workspace.google.com/products/sheets/"
+   }
+  ],
+  "steps": [
+   "Export a target list from Apollo.io",
+   "Import into Clay and enrich with company/website data",
+   "Add an AI column prompting for a one-line personalized opener grounded in enrichment data",
+   "Review a sample manually, then push approved rows to your sequencer or sheet"
+  ],
+  "cost": "paid",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "inbound-lead-qualification-to-crm",
+  "title": "Inbound lead qualification to CRM",
+  "use_case": "sales",
+  "problem": "Form leads sit unscored and unrouted.",
+  "tools": [
+   {
+    "name": "Typeform",
+    "url": "https://www.typeform.com"
+   },
+   {
+    "name": "Zapier",
+    "url": "https://zapier.com"
+   },
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   {
+    "name": "HubSpot",
+    "url": "https://www.hubspot.com"
+   },
+   {
+    "name": "Slack",
+    "url": "https://slack.com"
+   }
+  ],
+  "steps": [
+   "Trigger a Zap on new Typeform submission",
+   "Send answers to a ChatGPT step with your ICP criteria; return score + reason",
+   "Create/update the HubSpot contact with score",
+   "Notify the owner in Slack for high scores"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "meeting-notes-to-crm-follow-up",
+  "title": "Meeting notes to CRM follow-up",
+  "use_case": "sales",
+  "problem": "Call notes and next steps never make it into the CRM.",
+  "tools": [
+   {
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai"
+   },
+   {
+    "name": "Zapier",
+    "url": "https://zapier.com"
+   },
+   {
+    "name": "HubSpot",
+    "url": "https://www.hubspot.com"
+   },
+   {
+    "name": "Gmail",
+    "url": "https://workspace.google.com/products/gmail/"
+   }
+  ],
+  "steps": [
+   "Connect Fireflies.ai to your calendar to record calls",
+   "On transcript ready, trigger a Zap",
+   "Summarize next steps with an AI step and log to the HubSpot deal",
+   "Draft (not send) a follow-up email in Gmail for review"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "auto-booking-replies-for-interested-prospects",
+  "title": "Auto-booking replies for interested prospects",
+  "use_case": "sales",
+  "problem": "Back-and-forth scheduling slows deals.",
+  "tools": [
+   {
+    "name": "Gmail",
+    "url": "https://workspace.google.com/products/gmail/"
+   },
+   {
+    "name": "Make",
+    "url": "https://www.make.com"
+   },
+   {
+    "name": "OpenAI API",
+    "url": "https://platform.openai.com"
+   },
+   {
+    "name": "Calendly",
+    "url": "https://calendly.com"
+   }
+  ],
+  "steps": [
+   "Watch a Gmail label for replies",
+   "Classify intent (interested / not now / unsubscribe) with the OpenAI API",
+   "For 'interested', draft a reply with your Calendly link",
+   "Keep a human approval step before sending"
+  ],
+  "cost": "low",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "support-ticket-triage-and-tagging",
+  "title": "Support ticket triage and tagging",
+  "use_case": "support",
+  "problem": "Agents manually tag and route every ticket.",
+  "tools": [
+   {
+    "name": "Zendesk",
+    "url": "https://www.zendesk.com"
+   },
+   {
+    "name": "Zapier",
+    "url": "https://zapier.com"
+   },
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   }
+  ],
+  "steps": [
+   "Trigger on new Zendesk ticket",
+   "Classify category, urgency and language with an AI step",
+   "Write tags/priority back to the ticket",
+   "Route urgent tickets to an on-call group"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "help-center-answer-bot",
+  "title": "Help-center answer bot",
+  "use_case": "support",
+  "problem": "The same questions get asked repeatedly.",
+  "tools": [
+   {
+    "name": "Intercom",
+    "url": "https://www.intercom.com"
+   },
+   {
+    "name": "Notion",
+    "url": "https://www.notion.so"
+   }
+  ],
+  "steps": [
+   "Consolidate FAQs and policies in your help center (or export from Notion)",
+   "Enable Intercom's AI agent on your help-center content",
+   "Set handoff rules to a human for billing/edge cases",
+   "Review unanswered questions weekly and add articles"
+  ],
+  "cost": "paid",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "draft-replies-for-the-support-inbox",
+  "title": "Draft replies for the support inbox",
+  "use_case": "support",
+  "problem": "Small teams spend hours writing similar replies.",
+  "tools": [
+   {
+    "name": "Gmail",
+    "url": "https://workspace.google.com/products/gmail/"
+   },
+   {
+    "name": "n8n",
+    "url": "https://n8n.io"
+   },
+   {
+    "name": "Anthropic API",
+    "url": "https://www.anthropic.com/api"
+   }
+  ],
+  "steps": [
+   "Self-host or use n8n cloud; add a Gmail trigger",
+   "Retrieve relevant docs snippets and pass with the email to the Anthropic API",
+   "Save the result as a Gmail draft, never auto-send",
+   "Track edit rate to improve the prompt"
+  ],
+  "cost": "low",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "weekly-support-insights-digest",
+  "title": "Weekly support insights digest",
+  "use_case": "support",
+  "problem": "Nobody sees trends across hundreds of tickets.",
+  "tools": [
+   {
+    "name": "Zendesk",
+    "url": "https://www.zendesk.com"
+   },
+   {
+    "name": "Make",
+    "url": "https://www.make.com"
+   },
+   {
+    "name": "OpenAI API",
+    "url": "https://platform.openai.com"
+   },
+   {
+    "name": "Slack",
+    "url": "https://slack.com"
+   }
+  ],
+  "steps": [
+   "Schedule a weekly Make scenario to pull solved tickets",
+   "Batch-summarize top themes and emerging issues",
+   "Post the digest to a Slack channel",
+   "Link examples back to tickets"
+  ],
+  "cost": "low",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "ai-pair-programming-in-the-editor",
+  "title": "AI pair programming in the editor",
+  "use_case": "coding",
+  "problem": "Boilerplate and unfamiliar codebases slow developers.",
+  "tools": [
+   {
+    "name": "Cursor",
+    "url": "https://cursor.com"
+   },
+   {
+    "name": "GitHub",
+    "url": "https://github.com"
+   }
+  ],
+  "steps": [
+   "Install Cursor and open your repo",
+   "Add project rules describing conventions",
+   "Use chat/agent mode for scoped changes, review diffs",
+   "Commit via normal PR flow on GitHub"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "terminal-coding-agent-for-refactors",
+  "title": "Terminal coding agent for refactors",
+  "use_case": "coding",
+  "problem": "Multi-file refactors are tedious and error-prone.",
+  "tools": [
+   {
+    "name": "Claude Code",
+    "url": "https://www.anthropic.com/claude-code"
+   },
+   {
+    "name": "GitHub",
+    "url": "https://github.com"
+   }
+  ],
+  "steps": [
+   "Install Claude Code and run it in your repo",
+   "Describe the refactor and ask for a plan first",
+   "Let it edit and run tests; review each change",
+   "Open a PR for human review"
+  ],
+  "cost": "paid",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "ai-pull-request-review",
+  "title": "AI pull request review",
+  "use_case": "coding",
+  "problem": "PRs wait days for a first review pass.",
+  "tools": [
+   {
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot"
+   },
+   {
+    "name": "GitHub",
+    "url": "https://github.com"
+   }
+  ],
+  "steps": [
+   "Enable Copilot code review on the repository",
+   "Request Copilot as a reviewer on PRs",
+   "Treat comments as suggestions; humans approve merges",
+   "Tune with repository custom instructions"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "error-to-issue-triage",
+  "title": "Error-to-issue triage",
+  "use_case": "coding",
+  "problem": "Production errors pile up without context.",
+  "tools": [
+   {
+    "name": "Sentry",
+    "url": "https://sentry.io"
+   },
+   {
+    "name": "Linear",
+    "url": "https://linear.app"
+   },
+   {
+    "name": "Zapier",
+    "url": "https://zapier.com"
+   },
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   }
+  ],
+  "steps": [
+   "Configure Sentry alerts for new issues",
+   "Trigger a Zap that summarizes the stack trace with an AI step",
+   "Create a Linear issue with summary and Sentry link",
+   "Assign by code owner"
+  ],
+  "cost": "low",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "scheduled-dependency-and-test-agent",
+  "title": "Scheduled dependency and test agent",
+  "use_case": "coding",
+  "problem": "Dependency drift breaks builds unexpectedly.",
+  "tools": [
+   {
+    "name": "GitHub Actions",
+    "url": "https://github.com/features/actions"
+   },
+   {
+    "name": "Claude Code",
+    "url": "https://www.anthropic.com/claude-code"
+   }
+  ],
+  "steps": [
+   "Create a scheduled GitHub Actions workflow",
+   "Run tests after dependency updates",
+   "On failure, invoke a coding agent in CI to propose a fix branch",
+   "Require human review before merging"
+  ],
+  "cost": "low",
+  "difficulty": "hard"
+ },
+ {
+  "slug": "blog-post-to-social-thread-repurposing",
+  "title": "Blog post to social thread repurposing",
+  "use_case": "marketing",
+  "problem": "Long-form content rarely gets repurposed.",
+  "tools": [
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   {
+    "name": "Buffer",
+    "url": "https://buffer.com"
+   },
+   {
+    "name": "Canva",
+    "url": "https://www.canva.com"
+   }
+  ],
+  "steps": [
+   "Paste the post into ChatGPT with platform-specific instructions",
+   "Generate threads/posts and edit for voice",
+   "Create visuals in Canva",
+   "Schedule in Buffer"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "seo-content-brief-generator",
+  "title": "SEO content brief generator",
+  "use_case": "marketing",
+  "problem": "Writers start without clear search intent.",
+  "tools": [
+   {
+    "name": "Google Search Console",
+    "url": "https://search.google.com/search-console"
+   },
+   {
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai"
+   },
+   {
+    "name": "Notion",
+    "url": "https://www.notion.so"
+   }
+  ],
+  "steps": [
+   "Export queries with high impressions/low CTR from Search Console",
+   "Research each topic with Perplexity, keeping sources",
+   "Generate a brief (intent, outline, questions) in Notion",
+   "Assign to a writer"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "newsletter-drafting-from-curated-links",
+  "title": "Newsletter drafting from curated links",
+  "use_case": "marketing",
+  "problem": "Weekly newsletters take hours to assemble.",
+  "tools": [
+   {
+    "name": "Feedly",
+    "url": "https://feedly.com"
+   },
+   {
+    "name": "Readwise",
+    "url": "https://readwise.io"
+   },
+   {
+    "name": "Claude",
+    "url": "https://claude.ai"
+   },
+   {
+    "name": "Mailchimp",
+    "url": "https://mailchimp.com"
+   }
+  ],
+  "steps": [
+   "Curate articles in Feedly or Readwise",
+   "Export highlights weekly",
+   "Ask Claude to draft summaries in your voice",
+   "Edit and send via Mailchimp"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "competitor-change-monitor",
+  "title": "Competitor change monitor",
+  "use_case": "marketing",
+  "problem": "Competitor pricing and launches go unnoticed.",
+  "tools": [
+   {
+    "name": "n8n",
+    "url": "https://n8n.io"
+   },
+   {
+    "name": "OpenAI API",
+    "url": "https://platform.openai.com"
+   },
+   {
+    "name": "Slack",
+    "url": "https://slack.com"
+   }
+  ],
+  "steps": [
+   "Schedule n8n to fetch competitor pricing/changelog pages",
+   "Diff against last snapshot",
+   "Summarize meaningful changes with the OpenAI API",
+   "Post to Slack"
+  ],
+  "cost": "low",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "transaction-categorization-and-monthly-review",
+  "title": "Transaction categorization and monthly review",
+  "use_case": "personal-finance",
+  "problem": "Spreadsheets of transactions never get reviewed.",
+  "tools": [
+   {
+    "name": "Tiller",
+    "url": "https://www.tillerhq.com"
+   },
+   {
+    "name": "Google Sheets",
+    "url": "https://workspace.google.com/products/sheets/"
+   },
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   }
+  ],
+  "steps": [
+   "Connect accounts with Tiller to feed Google Sheets",
+   "Use Tiller AutoCat rules for categorization",
+   "Monthly, paste a category summary (no account numbers) into ChatGPT",
+   "Ask for anomalies and a short spending review"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "budget-coach-with-zero-based-budgeting",
+  "title": "Budget coach with zero-based budgeting",
+  "use_case": "personal-finance",
+  "problem": "Budgets fall apart mid-month.",
+  "tools": [
+   {
+    "name": "YNAB",
+    "url": "https://www.ynab.com"
+   },
+   {
+    "name": "Claude",
+    "url": "https://claude.ai"
+   }
+  ],
+  "steps": [
+   "Set up categories and targets in YNAB",
+   "Export a monthly report",
+   "Ask Claude to review overspending and suggest reallocations",
+   "Apply changes manually in YNAB"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "receipt-and-invoice-capture-for-freelancers",
+  "title": "Receipt and invoice capture for freelancers",
+  "use_case": "personal-finance",
+  "problem": "Receipts get lost before tax time.",
+  "tools": [
+   {
+    "name": "Gmail",
+    "url": "https://workspace.google.com/products/gmail/"
+   },
+   {
+    "name": "Zapier",
+    "url": "https://zapier.com"
+   },
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   {
+    "name": "Google Drive",
+    "url": "https://workspace.google.com/products/drive/"
+   },
+   {
+    "name": "Google Sheets",
+    "url": "https://workspace.google.com/products/sheets/"
+   }
+  ],
+  "steps": [
+   "Filter receipt emails into a Gmail label",
+   "Zap extracts vendor, date, amount with an AI step",
+   "Save attachments to Google Drive",
+   "Append a row to a Sheets expense log"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "small-business-bookkeeping-assistant",
+  "title": "Small-business bookkeeping assistant",
+  "use_case": "personal-finance",
+  "problem": "Uncategorized transactions pile up.",
+  "tools": [
+   {
+    "name": "QuickBooks",
+    "url": "https://quickbooks.intuit.com"
+   },
+   {
+    "name": "Stripe",
+    "url": "https://stripe.com"
+   }
+  ],
+  "steps": [
+   "Connect bank and Stripe to QuickBooks",
+   "Use QuickBooks' AI-assisted categorization",
+   "Review suggestions weekly",
+   "Hand clean books to your accountant"
+  ],
+  "cost": "paid",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "training-plan-from-your-activity-data",
+  "title": "Training plan from your activity data",
+  "use_case": "fitness",
+  "problem": "Generic plans ignore your actual training history.",
+  "tools": [
+   {
+    "name": "Strava",
+    "url": "https://www.strava.com"
+   },
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   {
+    "name": "Google Sheets",
+    "url": "https://workspace.google.com/products/sheets/"
+   }
+  ],
+  "steps": [
+   "Export recent Strava activities",
+   "Summarize weekly volume in Sheets",
+   "Ask ChatGPT for a progressive plan with constraints (time, injuries)",
+   "Re-review every 2 weeks; consult a professional for medical concerns"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "meal-prep-planner-and-grocery-list",
+  "title": "Meal-prep planner and grocery list",
+  "use_case": "fitness",
+  "problem": "Planning meals for macros is time-consuming.",
+  "tools": [
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   {
+    "name": "Notion",
+    "url": "https://www.notion.so"
+   }
+  ],
+  "steps": [
+   "Give ChatGPT targets, preferences and budget",
+   "Ask for a 7-day plan and consolidated grocery list",
+   "Save to a Notion template",
+   "Adjust weekly based on what you actually ate"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "workout-log-with-weekly-ai-check-ins",
+  "title": "Workout log with weekly AI check-ins",
+  "use_case": "fitness",
+  "problem": "Logs exist but nobody analyzes progress.",
+  "tools": [
+   {
+    "name": "Google Sheets",
+    "url": "https://workspace.google.com/products/sheets/"
+   },
+   {
+    "name": "Make",
+    "url": "https://www.make.com"
+   },
+   {
+    "name": "OpenAI API",
+    "url": "https://platform.openai.com"
+   },
+   {
+    "name": "Gmail",
+    "url": "https://workspace.google.com/products/gmail/"
+   }
+  ],
+  "steps": [
+   "Log sets/reps in Google Sheets",
+   "Weekly Make scenario reads the sheet",
+   "OpenAI API summarizes progress and plateaus",
+   "Email yourself the check-in"
+  ],
+  "cost": "low",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "local-voice-assistant-for-smart-home",
+  "title": "Local voice assistant for smart home",
+  "use_case": "home",
+  "problem": "Cloud assistants send everything off-device.",
+  "tools": [
+   {
+    "name": "Home Assistant",
+    "url": "https://www.home-assistant.io"
+   },
+   {
+    "name": "Ollama",
+    "url": "https://ollama.com"
+   },
+   {
+    "name": "Whisper",
+    "url": "https://github.com/openai/whisper"
+   }
+  ],
+  "steps": [
+   "Install Home Assistant",
+   "Run a local model with Ollama",
+   "Use Whisper-based speech-to-text via Home Assistant's voice pipeline",
+   "Expose only chosen entities to the assistant"
+  ],
+  "cost": "free",
+  "difficulty": "hard"
+ },
+ {
+  "slug": "camera-object-detection-alerts",
+  "title": "Camera object detection alerts",
+  "use_case": "home",
+  "problem": "Motion alerts are noisy and useless.",
+  "tools": [
+   {
+    "name": "Frigate",
+    "url": "https://frigate.video"
+   },
+   {
+    "name": "Home Assistant",
+    "url": "https://www.home-assistant.io"
+   }
+  ],
+  "steps": [
+   "Install Frigate with your cameras",
+   "Configure object detection zones (person, car)",
+   "Integrate with Home Assistant",
+   "Send notifications only for relevant objects"
+  ],
+  "cost": "free",
+  "difficulty": "hard"
+ },
+ {
+  "slug": "household-maintenance-agent",
+  "title": "Household maintenance agent",
+  "use_case": "home",
+  "problem": "Filter changes, warranties and chores get forgotten.",
+  "tools": [
+   {
+    "name": "Notion",
+    "url": "https://www.notion.so"
+   },
+   {
+    "name": "Google Calendar",
+    "url": "https://workspace.google.com/products/calendar/"
+   },
+   {
+    "name": "Claude",
+    "url": "https://claude.ai"
+   }
+  ],
+  "steps": [
+   "List appliances, manuals and dates in Notion",
+   "Ask Claude to propose a maintenance schedule",
+   "Create recurring Google Calendar events",
+   "Review seasonally"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "literature-review-assistant",
+  "title": "Literature review assistant",
+  "use_case": "research",
+  "problem": "Finding and summarizing papers takes weeks.",
+  "tools": [
+   {
+    "name": "Elicit",
+    "url": "https://elicit.com"
+   },
+   {
+    "name": "Zotero",
+    "url": "https://www.zotero.org"
+   }
+  ],
+  "steps": [
+   "Ask your research question in Elicit",
+   "Screen papers and extract key columns",
+   "Save sources to Zotero",
+   "Verify claims against the original papers"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "cited-web-research-briefs",
+  "title": "Cited web research briefs",
+  "use_case": "research",
+  "problem": "Quick research lacks sources.",
+  "tools": [
+   {
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai"
+   },
+   {
+    "name": "Notion",
+    "url": "https://www.notion.so"
+   }
+  ],
+  "steps": [
+   "Ask Perplexity a focused question",
+   "Check the cited sources",
+   "Save the brief to Notion",
+   "Re-run monthly for updates"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "personal-knowledge-base-q-a",
+  "title": "Personal knowledge base Q&A",
+  "use_case": "research",
+  "problem": "Notes become impossible to search.",
+  "tools": [
+   {
+    "name": "Obsidian",
+    "url": "https://obsidian.md"
+   },
+   {
+    "name": "Ollama",
+    "url": "https://ollama.com"
+   }
+  ],
+  "steps": [
+   "Keep notes in Obsidian",
+   "Install a community plugin that connects to a local Ollama model",
+   "Index your vault locally",
+   "Ask questions with links back to notes"
+  ],
+  "cost": "free",
+  "difficulty": "medium"
+ },
+ {
+  "slug": "meeting-transcription-and-action-items",
+  "title": "Meeting transcription and action items",
+  "use_case": "ops",
+  "problem": "Action items from meetings get lost.",
+  "tools": [
+   {
+    "name": "Otter.ai",
+    "url": "https://otter.ai"
+   },
+   {
+    "name": "Slack",
+    "url": "https://slack.com"
+   }
+  ],
+  "steps": [
+   "Connect Otter.ai to your calendar",
+   "Let it join and transcribe meetings",
+   "Share summary and action items to Slack",
+   "Assign owners manually"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "ops-request-intake-to-airtable",
+  "title": "Ops request intake to Airtable",
+  "use_case": "ops",
+  "problem": "Internal requests arrive in scattered DMs.",
+  "tools": [
+   {
+    "name": "Slack",
+    "url": "https://slack.com"
+   },
+   {
+    "name": "Zapier",
+    "url": "https://zapier.com"
+   },
+   {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   {
+    "name": "Airtable",
+    "url": "https://www.airtable.com"
+   }
+  ],
+  "steps": [
+   "Create a Slack workflow or channel for requests",
+   "Zap classifies request type and priority with AI",
+   "Create an Airtable record",
+   "Post status back in-thread"
+  ],
+  "cost": "low",
+  "difficulty": "easy"
+ }
+]
