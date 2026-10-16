@@ -38,3 +38,10 @@ video{width:100%;height:auto;border-radius:14px;background:#14112b;display:block
 @media (prefers-reduced-motion:reduce){.nlslide{transition:none}}
 .starter .sp{border-left:6px solid var(--c)}
 @media print{.top,footer,.nlslide{display:none}}
+
+.explain{margin:22px 0;padding:24px 20px;border-radius:18px;background:linear-gradient(135deg,#fdf2f8,#fff7ed 55%,#ede9fe);border:2px solid #f9a8d4}.explain h2{margin:0 0 .3em;font-size:1.7rem;background:linear-gradient(90deg,var(--brand),var(--brand2),#ea580c);-webkit-background-clip:text;background-clip:text;color:transparent}.explain .lead{font-size:1.1rem}
+.steps4{display:grid;grid-template-columns:1fr;gap:10px;margin:16px 0}.steps4 div{background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 2px 10px rgba(20,17,43,.06);font-weight:600}.steps4 b{display:inline-grid;place-items:center;width:28px;height:28px;margin-right:10px;border-radius:50%;background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff}
+.bakery,.money{background:#fff;border-radius:14px;padding:14px 18px;margin-top:14px;border-left:6px solid #ea580c}.money{border-left-color:var(--brand)}.bakery h3,.money h3{margin:.2em 0}
+.helpcall{display:block;margin:18px 0;padding:14px 18px;border-radius:14px;background:linear-gradient(120deg,#ede9fe,#fce7f3);border:2px dashed var(--brand)}
+.helpform{display:grid;gap:12px;max-width:560px}.helpform label{display:grid;gap:4px;font-weight:600}.helpform textarea{padding:11px;border:1px solid var(--line);border-radius:10px;font:inherit}
+@media(min-width:760px){.steps4{grid-template-columns:repeat(4,1fr)}.explain{padding:32px}}
