@@ -124,3 +124,32 @@ sp=f'''<main class="wrap"><h1>Sponsor Roar Workflows</h1>
 {tier("Newsletter sponsor","$99 / issue","","A short sponsored blurb at the top of the Roar Workflows newsletter.","Newsletter%20sponsor")}
 <p>Sponsored placements are always clearly labeled. To book or ask questions, email <a href="{M}Sponsor%20Roar%20Workflows">submissions.desk@mail.grokbot.com</a>.</p></main>'''
 open("sponsor.html","w").write(head("Sponsor Roar Workflows | AI agent workflow directory","Sponsor options for Roar Workflows: featured listings, a homepage slot and newsletter sponsorship at launch pricing.","/sponsor.html")+sp+FOOT)
+
+# ---- Newsletter: hero band, inline recipe box, starter pack, thank-you page, slide-in ----
+NL_ACT="https://buttondown.com/api/emails/embed-subscribe/roarworkflows"
+def nlform(src,btn="Send me the Starter Pack"):
+  return f'<form class="nlform" action="{NL_ACT}" method="post" data-src="{src}"><label class="sr" for="nl-{src}">Email address</label><input id="nl-{src}" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><input type="hidden" name="embed" value="1"><input type="hidden" name="tag" value="src-{src}"><button class="btn nlbtn">{btn}</button></form>'
+NL_PROMISE="One ready-to-use AI workflow every week, in 5 minutes."
+HERO_NL=f'<section class="nlband" id="join"><div class="nlband-in"><p class="kicker">🦁 Free weekly newsletter</p><h2>{NL_PROMISE}</h2><p>Get the free <strong>Starter Pack: 5 AI workflows you can set up this weekend</strong> right away. Real tools, real steps, no fluff. One email a week, unsubscribe in one click.</p>{nlform("hero")}</div></section>'
+RECIPE_NL=f'<aside class="nlbox"><h2>Liked this recipe? Get one like it every week.</h2><p>{NL_PROMISE} Plus the free Starter Pack (5 weekend-ready workflows) the moment you join.</p>{nlform("recipe","Get the free Starter Pack")}<p class="small">One email a week. Unsubscribe anytime.</p></aside>'
+NLJS=f'<script src="{B}/nl.js" defer></script>'
+STARTER=["support-ticket-triage-and-tagging","meeting-notes-to-crm-follow-up","blog-post-to-social-thread-repurposing","receipt-and-invoice-capture-for-freelancers","cited-web-research-briefs"]
+byslug={r['slug']:r for r in data}
+def addnl(path,inline):
+  h=open(path).read()
+  if inline: h=h.replace('<p class="note">',RECIPE_NL+'<p class="note">',1)
+  h=h.replace('</body>',NLJS+'</body>',1); open(path,"w").write(h)
+for r in data: addnl(f"recipes/{r['slug']}.html",True)
+for k in BEST: addnl(f"best/{k}.html",False)
+addnl("sponsor.html",False)
+h=open("index.html").read()
+h=h.replace('</section>\n<section class="filters">','</section>\n'+HERO_NL+'\n<section class="filters">',1)
+h=re.sub(r'<section id="newsletter".*?</section>',f'<section id="newsletter" class="nlband small-band"><div class="nlband-in"><h2>{NL_PROMISE}</h2><p>Join free and get the Starter Pack instantly. <a href="https://buttondown.com/roarworkflows/archive">Past issues</a></p>{nlform("footer")}</div></section>',h,count=1,flags=re.S)
+h=h.replace('</body>',NLJS+'</body>',1); open("index.html","w").write(h)
+sp=f'<main class="wrap recipe starter"><p class="crumb"><a href="{B}/">All recipes</a> › Starter Pack</p><h1>🦁 Starter Pack: 5 AI workflows you can set up this weekend</h1><p>Five easy, low-cost workflows picked from the Roar Workflows directory. Each takes an afternoon or less. Print this page or save it as a PDF (<a href="{B}/starter-pack.pdf">download PDF</a>).</p>'
+for i,sl in enumerate(STARTER,1):
+  r=byslug[sl]; sp+=f'<section class="whatcan sp" style="--c:{CAT[r["use_case"]][1]}"><h2>{i}. {e(r["title"])}</h2><p class="badges">{chip(r["use_case"])}<span class="b">cost: {r["cost"]}</span><span class="b">difficulty: {r["difficulty"]}</span></p><p><strong>The problem:</strong> {e(r["problem"])}</p><p><strong>Tools:</strong> {", ".join(f"<a href=\"{x["url"]}\" rel=\"noopener\">{e(x["name"])}</a>" for x in r["tools"])}</p><ol>'+''.join(f'<li>{e(s)}</li>' for s in r["steps"])+f'</ol><p><a href="{B}/recipes/{sl}.html">Full recipe →</a></p></section>'
+sp+='<p>Got stuck, or want a workflow for your job? Just reply to any of our emails. We read every one.</p><p>The Roar Workflows Team</p></main>'
+open("starter-pack.html","w").write(head("Starter Pack: 5 AI workflows you can set up this weekend | Roar Workflows","Five easy, low-cost AI agent workflows with tools and step-by-step setup, from the Roar Workflows directory.","/starter-pack.html",'<meta name="robots" content="noindex">')+sp+FOOT)
+th=f'<main class="wrap recipe thanks"><section class="nlband"><div class="nlband-in"><h1>🎉 You\'re almost in!</h1><p><strong>Step 1:</strong> check your inbox and tap the confirm link from Buttondown (peek in Promotions or Spam if you don\'t see it).</p><p><strong>Step 2:</strong> grab your free Starter Pack now:</p><p><a class="btn nlbtn" href="{B}/starter-pack.html">Open the Starter Pack</a> <a class="btn alt" href="{B}/starter-pack.pdf">Download PDF</a></p></div></section><p>Your first weekly workflow arrives soon. Tip: add our address to your contacts so we never land in spam.</p><p><a href="{B}/">← Back to all recipes</a></p></main>'
+open("thanks.html","w").write(head("Thanks for joining | Roar Workflows","Confirm your subscription and get your free Starter Pack.","/thanks.html",'<meta name="robots" content="noindex">')+th+FOOT)
