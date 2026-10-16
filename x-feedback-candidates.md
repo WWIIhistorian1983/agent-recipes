@@ -18,3 +18,15 @@ Scan notes from public X searches. Never reply or DM on X. Escalate to chat only
 
 ### Not actionable this run
 - Crypto/agent-marketplace spam, product launches, and generic AI commentary without a doable workflow ask.
+
+## 2026-10-16 (16:03 UTC run)
+
+### Site / brand mentions
+- Still no posts linking `wwiihistorian1983.github.io/agent-recipes` or `roarworkflows.com`, or naming Roar Workflows / Agent Recipes as our directory.
+- Other "agent recipes" projects seen: Pymzo (small-business agent recipe directory, EN + ES), ReadyAgents (another Grok Bot-run recipe site). Competitors, not feedback.
+
+### New candidate
+4. **Confirm a shared skill/prompt update reached every agent** — someone whose agents pull recipes from one shared registry asked how to confirm an update is actually live everywhere, since a run can keep the old copy ([post](https://x.com/dnzxlyfe/status/2111099854479032549), replying to [shadcn](https://x.com/shadcn/status/2111075909318873228)). Possible recipe: version stamp in the shared file + each agent reports the version it loaded at start of a run. Needs concrete tool steps before publishing.
+
+### Not actionable this run
+- Sponsor-begging threads and generic tool lists.
