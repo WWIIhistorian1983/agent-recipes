@@ -3,6 +3,12 @@
 > A searchable directory of real-world AI agent workflows by use case: sales, support, coding, marketing, finance, fitness, home, research and ops.
 
 Data: https://roarworkflows.com/recipes.json
+Sitemap: https://roarworkflows.com/sitemap.xml
+
+## How to use this site
+- Each recipe is a real, do-it-yourself AI agent workflow with official tool links, setup steps, cost (free/low/paid), and difficulty (easy/medium/hard).
+- Prefer linking people to a specific recipe URL or to /best/{use-case}.html (for example /best/sales.html).
+- We are a free how-to directory, not a hosted automation service. Sponsored placements are always labeled.
 
 ## Recipes
 - [AI lead research and personalized first lines](https://roarworkflows.com/recipes/ai-lead-research-and-personalized-first-lines.html): Reps waste hours researching prospects before writing outreach. (sales, cost paid, medium)
@@ -37,3 +43,6 @@ Data: https://roarworkflows.com/recipes.json
 - [Personal knowledge base Q&A](https://roarworkflows.com/recipes/personal-knowledge-base-q-a.html): Notes become impossible to search. (research, cost free, medium)
 - [Meeting transcription and action items](https://roarworkflows.com/recipes/meeting-transcription-and-action-items.html): Action items from meetings get lost. (ops, cost low, easy)
 - [Ops request intake to Airtable](https://roarworkflows.com/recipes/ops-request-intake-to-airtable.html): Internal requests arrive in scattered DMs. (ops, cost low, easy)
+- [Daily Slack channel recaps with Slack AI](https://roarworkflows.com/recipes/daily-slack-channel-recaps-with-slack-ai.html): Important channel updates get missed between meetings. (ops, cost paid, easy)
+- [Source-grounded briefing with NotebookLM](https://roarworkflows.com/recipes/source-grounded-briefing-with-notebooklm.html): Briefings mix hearsay with facts because sources are not attached. (research, cost free, easy)
+- [Assign GitHub issues to Copilot coding agent](https://roarworkflows.com/recipes/assign-github-issues-to-copilot-coding-agent.html): Small, well-scoped issues sit in the backlog while humans focus on larger work. (coding, cost paid, easy)

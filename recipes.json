@@ -890,5 +890,73 @@
   ],
   "cost": "low",
   "difficulty": "easy"
+ },
+ {
+  "slug": "daily-slack-channel-recaps-with-slack-ai",
+  "title": "Daily Slack channel recaps with Slack AI",
+  "use_case": "ops",
+  "problem": "Important channel updates get missed between meetings.",
+  "tools": [
+   {
+    "name": "Slack",
+    "url": "https://slack.com"
+   }
+  ],
+  "steps": [
+   "Open Recap in the Slack sidebar (or find it under More)",
+   "Choose which channels to include and turn Recaps on",
+   "Optionally mute those channels so they stop interrupting you during the day",
+   "Each morning, read the recap and open source messages when you need detail"
+  ],
+  "cost": "paid",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "source-grounded-briefing-with-notebooklm",
+  "title": "Source-grounded briefing with NotebookLM",
+  "use_case": "research",
+  "problem": "Briefings mix hearsay with facts because sources are not attached.",
+  "tools": [
+   {
+    "name": "NotebookLM",
+    "url": "https://notebook.google.com/"
+   },
+   {
+    "name": "Google Drive",
+    "url": "https://workspace.google.com/products/drive/"
+   }
+  ],
+  "steps": [
+   "Create a notebook in NotebookLM",
+   "Add sources from Google Drive (Docs, Slides, PDFs) or upload files and web URLs",
+   "Ask focused questions and check the in-line citations in the source viewer",
+   "Generate a briefing or study guide, then verify claims before you share it"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
+ },
+ {
+  "slug": "assign-github-issues-to-copilot-coding-agent",
+  "title": "Assign GitHub issues to Copilot coding agent",
+  "use_case": "coding",
+  "problem": "Small, well-scoped issues sit in the backlog while humans focus on larger work.",
+  "tools": [
+   {
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot"
+   },
+   {
+    "name": "GitHub",
+    "url": "https://github.com"
+   }
+  ],
+  "steps": [
+   "Confirm Copilot coding agent is available for your account and repository",
+   "Write a clear issue with acceptance criteria and relevant file paths",
+   "Assign Copilot as the assignee so it works on a branch and opens a pull request",
+   "Review the PR like any other, request changes if needed, then merge"
+  ],
+  "cost": "paid",
+  "difficulty": "easy"
  }
 ]
