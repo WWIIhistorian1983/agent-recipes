@@ -73,7 +73,7 @@ def vtag(slug):
 
 def vobj(sl):
   v,t=VIDEOS[sl]; return {"@context":"https://schema.org","@type":"VideoObject","name":t+" | Roar Workflows","description":"Short video: "+t+". Shows the problem, the recipe and the result.","thumbnailUrl":f"{SITE}/videos/{v}.jpg","contentUrl":f"{SITE}/videos/{v}.mp4","embedUrl":f"{SITE}/recipes/{sl}.html","uploadDate":"2026-10-15","duration":"PT24S"}
-FOOT=f'<footer><p>Roar Workflows. Tool links go to official sites; we are not affiliated unless marked sponsored. <a href="{B}/llms.txt">llms.txt</a> · <a href="{B}/sitemap.xml">sitemap</a> · <a href="{B}/sponsor.html">Sponsor</a></p><p class="credits">{CRED}</p></footer><script data-goatcounter="https://roarworkflows.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>'
+FOOT=f'<footer><p>Roar Workflows. Tool links go to official sites; we are not affiliated unless marked sponsored. <a href="{B}/llms.txt">llms.txt</a> · <a href="{B}/sitemap.xml">sitemap</a> · <a href="{B}/sponsor.html">Sponsor</a></p><p class="credits">{CRED}</p><p class="verse" style="font-style:italic;opacity:.85;margin-top:.6em">&ldquo;I can do all things through Christ who strengthens me.&rdquo; &mdash; Philippians 4:13 (NKJV)</p></footer><script data-goatcounter="https://roarworkflows.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>'
 for r in data:
   title=f"{r['title']} | AI agent recipe for {r['use_case'].replace('-',' ')} | Roar Workflows"
   ld={"@context":"https://schema.org","@type":"HowTo","name":r['title'],"description":r['problem'],"tool":[{"@type":"HowToTool","name":x['name']} for x in r['tools']],"step":[{"@type":"HowToStep","position":i+1,"text":s} for i,s in enumerate(r['steps'])]}
