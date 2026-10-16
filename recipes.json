@@ -958,5 +958,33 @@
   ],
   "cost": "paid",
   "difficulty": "easy"
+ },
+ {
+  "slug": "handoff-notes-between-coding-agents",
+  "title": "Handoff notes between coding agents",
+  "use_case": "coding",
+  "problem": "Switching coding agents mid-task loses context and causes rework.",
+  "tools": [
+   {
+    "name": "Claude Code",
+    "url": "https://claude.com/product/claude-code"
+   },
+   {
+    "name": "Cursor",
+    "url": "https://cursor.com"
+   },
+   {
+    "name": "GitHub",
+    "url": "https://github.com"
+   }
+  ],
+  "steps": [
+   "Before you switch tools, ask the current agent to write a HANDOFF.md in the repo covering the goal, what is done, open decisions, files touched, and the next three steps",
+   "Commit the file on your branch (or keep it unstaged if the switch is temporary) so the next agent can read it",
+   "Open the same repo in the next agent and tell it to read HANDOFF.md first, then continue",
+   "Update or delete HANDOFF.md when the task is finished"
+  ],
+  "cost": "free",
+  "difficulty": "easy"
  }
 ]

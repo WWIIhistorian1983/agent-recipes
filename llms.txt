@@ -46,3 +46,4 @@ Sitemap: https://roarworkflows.com/sitemap.xml
 - [Daily Slack channel recaps with Slack AI](https://roarworkflows.com/recipes/daily-slack-channel-recaps-with-slack-ai.html): Important channel updates get missed between meetings. (ops, cost paid, easy)
 - [Source-grounded briefing with NotebookLM](https://roarworkflows.com/recipes/source-grounded-briefing-with-notebooklm.html): Briefings mix hearsay with facts because sources are not attached. (research, cost free, easy)
 - [Assign GitHub issues to Copilot coding agent](https://roarworkflows.com/recipes/assign-github-issues-to-copilot-coding-agent.html): Small, well-scoped issues sit in the backlog while humans focus on larger work. (coding, cost paid, easy)
+- [Handoff notes between coding agents](https://roarworkflows.com/recipes/handoff-notes-between-coding-agents.html): Switching coding agents mid-task loses context and causes rework. (coding, cost free, easy)
